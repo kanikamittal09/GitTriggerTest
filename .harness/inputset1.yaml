@@ -1,0 +1,22 @@
+inputSet:
+  name: inputset1
+  identifier: inputset1
+  orgIdentifier: default
+  projectIdentifier: CD_Triggers_Automation
+  pipeline:
+    identifier: shell
+    stages:
+      - stage:
+          identifier: shell
+          type: Custom
+          spec:
+            execution:
+              steps:
+                - step:
+                    identifier: ShellScript_1
+                    type: ShellScript
+                    spec:
+                      source:
+                        type: Inline
+                        spec:
+                          script: echo inputset1
