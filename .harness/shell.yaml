@@ -1,0 +1,30 @@
+pipeline:
+  name: shell
+  identifier: shell
+  projectIdentifier: CD_Triggers_Automation
+  orgIdentifier: default
+  tags: {}
+  stages:
+    - stage:
+        name: shell
+        identifier: shell
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  timeout: 10m
+                  spec:
+                    shell: Bash
+                    onDelegate: true
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo hello
+                    environmentVariables: []
+                    outputVariables: []
+        tags: {}
